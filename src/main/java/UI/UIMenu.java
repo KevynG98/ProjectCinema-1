@@ -2,9 +2,11 @@ package UI;
 
 import java.util.Scanner;
 
+import static UI.UIAuthUser.authUser;
+
 public class UIMenu {
 
-public static void ShowMenu(){
+public static void showMenu(){
     System.out.println("Welcome to menu");
     int response = 0 ;
     do {
@@ -20,11 +22,11 @@ public static void ShowMenu(){
             case 1:
                 System.out.println("Admin");
                 response = 0;
-                // authUser(1);
+                authUser(1);
                 break;
             case 2:
                 response = 0;
-                //  authUser(2);
+                authUser(2);
                 //  showPatientMenu();
                 break;
             case 0:

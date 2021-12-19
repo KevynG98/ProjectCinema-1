@@ -1,15 +1,18 @@
 package Model;
 
+        import lombok.AllArgsConstructor;
         import lombok.Getter;
         import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public abstract class UserDetails {
 
-    private String Name;
-    private String LastName;
-    private String Nickname;
-    private String Password;
-    private long Id;
+    private long id;
+    private String name;
+    private String lastName;
+    private String nickname;
+    private String password;
+
 }
