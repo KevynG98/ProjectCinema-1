@@ -3,6 +3,7 @@ import lombok.Getter;
 import lombok.Setter;
 @Getter @Setter
 public class User extends UserDetails  {
+
     private static final long serialVersionUID = 1L;
     public User(long id, String name, String lastName, String nickname, String password )
     {

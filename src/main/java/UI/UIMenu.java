@@ -10,8 +10,7 @@ public static void showMenu(){
     int response = 0 ;
     do {
         System.out.println("Choose a options");
-        System.out.println("1.Admin");
-        System.out.println("2.User");
+        System.out.println("1.Login");
         System.out.println("3.Register User");
         System.out.println("4.Show users");
         System.out.println("0.Exit");

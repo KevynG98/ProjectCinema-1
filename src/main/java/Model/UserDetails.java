@@ -3,7 +3,6 @@ package Model;
         import lombok.AllArgsConstructor;
         import lombok.Getter;
         import lombok.Setter;
-
         import java.io.Serializable;
 
 @Getter
@@ -16,7 +15,6 @@ public abstract class UserDetails implements Serializable {
     private String lastName;
     private String nickname;
     private String password;
-
 
     @Override
     public String toString() {
