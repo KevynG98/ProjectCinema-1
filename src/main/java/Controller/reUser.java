@@ -10,7 +10,7 @@ public class reUser {
     public static void reUsers(String name,String lastName,String nickname,String password){
 
         try{
-            File file = new File("C:\\Users\\Barahona\\IdeaProjects\\ProjectCinema\\Data\\Data.txt");
+            File file = new File("Data/Data.txt");
             Map<Integer, User> userListRecovery = new HashMap<Integer, User>();
             //Recupera usuarios actuales y add nuevos
             ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
@@ -29,7 +29,7 @@ public class reUser {
                 writeData.close();
             }
     } catch(Exception e){
-        System.out.println(e.getMessage());
+        System.err.println(e.getMessage());
      }
     }
 }

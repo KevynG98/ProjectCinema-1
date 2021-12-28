@@ -1,46 +1,44 @@
 package UI;
+
 import java.util.Scanner;
+
 import static Controller.showUser.showUsers;
 import static UI.UIAuthUser.authUser;
 import static UI.UIResgisterUser.registerUser;
 
 public class UIMenu {
-public static void showMenu(){
-    System.out.println("Welcome to menu");
-    int response = 0 ;
+public static void showMenu() {
+    System.out.println("Welcome to the Menu");
+    int response;
     do {
-        System.out.println("Choose a options");
-        System.out.println("1.Login");
+
+        System.out.println("Choose an Option");
+        System.out.println("1.Admin");
+        System.out.println("2.User");
         System.out.println("3.Register User");
-        System.out.println("4.Show users");
+        System.out.println("4.Show Users");
         System.out.println("0.Exit");
         Scanner sc = new Scanner(System.in);
         response = Integer.parseInt(sc.nextLine());
         switch (response) {
-            case 1:
+            case 1 -> {
                 System.out.println("Admin");
                 response = 0;
                 authUser(1);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 response = 0;
                 authUser(2);
-                break;
-            case 3:
-                registerUser();
-                break;
-            case 4:
+            }
+            case 3 -> registerUser();
+            case 4 -> {
                 showUsers();
                 showMenu();
-                break;
-            case 0:
-                System.out.println("Thank for visit");
-                break;
-
-            default:
-                System.out.println("Option error");
+            }
+            case 0 -> System.out.println("Thank you for your Visit");
+            default -> System.out.println("Invalid Option");
         }
-    } while (response != 0) ;
+    } while (0 != response);
    }
 }
 
