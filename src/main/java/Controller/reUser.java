@@ -8,7 +8,7 @@ import static Model.Users.userList;
 public class reUser {
     public static void reUsers(String name,String lastName,String nickname,String password){
         try{
-            File file = new File("C:\\Users\\Barahona\\IdeaProjects\\ProjectCinema\\Data\\Data.txt");
+            File file = new File("Data/Data.txt");
             Map<Integer, User> userListRecovery = new HashMap<Integer, User>();
             if(file.exists() && userListRecovery.size()>1) {
                 //Recupera usuarios actuales y add nuevos
@@ -26,7 +26,7 @@ public class reUser {
                 writeData.close();
             }
     } catch(Exception e){
-        System.out.println(e.getMessage());
+        System.err.println(e.getMessage());
      }
     }
 }
