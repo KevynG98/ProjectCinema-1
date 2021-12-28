@@ -16,6 +16,7 @@ public class UIResgisterUser {
             String nickname = sc.nextLine();
             System.out.println("Write your password");
             String password = sc.nextLine();
+
             System.out.println("1.Confirmar");
             System.out.println("2.back");
             System.out.println("3.exit");

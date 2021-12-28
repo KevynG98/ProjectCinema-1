@@ -12,4 +12,5 @@ public abstract class movie {
     private long id;
     private String name;
     private String date;
+
 }
