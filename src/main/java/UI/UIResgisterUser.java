@@ -1,6 +1,6 @@
 package UI;
 import java.util.Scanner;
-import static Controller.reUser.reUsers;
+import static Controller.User.reUser.reUsers;
 import static UI.UIMenu.showMenu;
 
 public class UIResgisterUser {

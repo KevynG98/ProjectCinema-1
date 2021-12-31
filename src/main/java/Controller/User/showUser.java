@@ -1,4 +1,4 @@
-package Controller;
+package Controller.User;
 
 import Model.User;
 
@@ -8,22 +8,21 @@ import java.io.ObjectInputStream;
 import java.util.Map;
 import java.util.Scanner;
 
+import static Controller.User.CrudUser.readUser;
+import static Model.Users.userList;
 import static UI.UIMenu.showMenu;
 
 public class showUser {
     public static void showUsers(){
+
         try{
             //Recupera todos los usuarios existentes
-            File file = new File("Data/Data.txt");
-            ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
-            Map<Integer,User> userData = (Map<Integer, User>) recoveryData.readObject();
-            recoveryData.close();
-            for (Map.Entry<Integer,User> data: userData.entrySet()) {
+             readUser();
+             //Recorre los usarios existentes
+            for (Map.Entry<Integer,User> data: userList.entrySet()) {
                 System.out.println(data.getValue());
             }
-           } catch (ClassNotFoundException e){
-            System.out.println(e.getMessage());
-          } catch(Exception e){
+           } catch(Exception e){
             System.out.println(e.getMessage());
           }
         int response;
