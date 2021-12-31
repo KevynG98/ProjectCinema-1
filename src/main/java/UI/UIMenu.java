@@ -1,9 +1,8 @@
 package UI;
-
 import java.util.Scanner;
-
-import static Controller.showUser.showUsers;
+import static Controller.User.showUser.showUsers;
 import static UI.UIAuthUser.authUser;
+import static UI.UIMovie.movieMenu;
 import static UI.UIResgisterUser.registerUser;
 
 public class UIMenu {
@@ -17,6 +16,7 @@ public static void showMenu() {
         System.out.println("2.User");
         System.out.println("3.Register User");
         System.out.println("4.Show Users");
+        System.out.println("5.Movies menu");
         System.out.println("0.Exit");
         Scanner sc = new Scanner(System.in);
         response = Integer.parseInt(sc.nextLine());
@@ -33,7 +33,9 @@ public static void showMenu() {
             case 3 -> registerUser();
             case 4 -> {
                 showUsers();
-                showMenu();
+            }
+            case 5 ->{
+                movieMenu();
             }
             case 0 -> System.out.println("Thank you for your Visit");
             default -> System.out.println("Invalid Option");

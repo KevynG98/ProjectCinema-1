@@ -1,8 +1,6 @@
 package Model;
 
-import java.util.Date;
-
-public class room extends movie{
+public class room extends Movie {
 
     public room(long id, String name, String date) {
         super(id, name, date);

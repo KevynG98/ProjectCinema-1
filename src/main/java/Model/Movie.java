@@ -1,0 +1,26 @@
+package Model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@Getter
+@Setter
+@AllArgsConstructor
+
+public class Movie implements Serializable {
+    private long id;
+    private String title;
+    private String premiere;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", Title='" + getTitle() + '\'' +
+                ", Premiere='" + getPremiere() + '\'' +
+                '}';
+    }
+}
