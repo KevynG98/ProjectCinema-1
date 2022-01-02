@@ -1,13 +1,10 @@
 package UI;
-
 import java.util.Scanner;
-
 import static Controller.Movie.showMovie.showMovies;
 import static UI.UIMenu.showMenu;
 import static UI.UIReMovie.reMovie;
 
 public class UIMovie {
-
     public static void movieMenu(){
         int response;
         do{

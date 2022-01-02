@@ -1,17 +1,18 @@
-package Controller.Movie;
-import Model.Movie;
+package Controller.Admin;
+import Model.Admin;
 import java.util.Map;
 import java.util.Scanner;
-import static Model.Movies.movieList;
-import static Controller.Movie.CrudMovie.readMovie;
-import static UI.UIUserMenu.userMenu;
+import static Controller.Admin.CrudAdmin.readAdmin;
+import static Model.Admins.adminList;
+import static UI.UIAdminMenu.adminMenu;
 
-public class showMovie {
-    public static void showMovies(){
+public class showAdmin {
+    public static void showAdmins(){
         try{
-            //Recupera todos los usuarios existentes
-         readMovie();
-            for (Map.Entry<Integer,Movie> data: movieList.entrySet()) {
+            //Recupera todos los usuarios admin existentes
+            readAdmin();
+            //Recorre los usuarios admin existentes
+            for (Map.Entry<Integer, Admin> data: adminList.entrySet()) {
                 System.out.println(data.getValue());
             }
         } catch(Exception e){
@@ -23,7 +24,7 @@ public class showMovie {
             System.out.println("1.Back");
             response = Integer.parseInt(sc.nextLine());
             if (response == 1) {
-                userMenu();
+                adminMenu();
             } else {
                 System.out.println("Error");
             }

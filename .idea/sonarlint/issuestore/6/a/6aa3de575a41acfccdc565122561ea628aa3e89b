@@ -1,0 +1,18 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(­ñ¾óÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ïù¯¯ûÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ïù¯¯ûÿÿÿÿ
+Z	java:S106&"9Replace this use of System.out or System.err by a logger.(ïù¯¯ûÿÿÿÿ8­³Æ•á/
+m
+java:S1192
+"PDefine a constant instead of duplicating this literal "Data/Movies.txt" 3 times.(ø˜Ò8Ÿ‰È•á/
+b
+java:S2184"@Cast one of the operands of this addition operation to a "long".(ê÷Òùÿÿÿÿ8™Ò½•á/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³Äî°
+j
+java:S2095"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(¶áÕÃıÿÿÿÿ
+m
+java:S2095"PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(Ë¸‘Ú8Ò½•á/
+m
+java:S2095""PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(Ë¸‘Ú8“ĞÇ•á/
