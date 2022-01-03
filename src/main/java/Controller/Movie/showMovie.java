@@ -6,6 +6,7 @@ import static Model.Movies.movieList;
 import static Controller.Movie.CrudMovie.readMovie;
 import static UI.UIMovie.movieMenu;
 
+
 public class showMovie {
     public static void showMovies(){
         try{

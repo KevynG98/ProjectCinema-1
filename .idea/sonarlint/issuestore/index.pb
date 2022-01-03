@@ -19,5 +19,7 @@ M
 src/main/java/Model/User.java,a\4\a4a024c000f0299377044efbf7bdd3dfe84936aa
 ?
 Data/Movies.txt,4\6\4615e2f37c2aad449054996f75c90832fea10c7d
+[
++src/main/java/Controller/Movie/reMovie.java,b\3\b3dfa089a9365529b7e0e1a981128fcb06470a85
 ]
 -src/main/java/Controller/Movie/CrudMovie.java,6\a\6aa3de575a41acfccdc565122561ea628aa3e89b

@@ -32,6 +32,4 @@ public class UIAdminMenu {
         }
             while (response != 0) ;
     }
-
-
 }
