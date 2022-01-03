@@ -1,10 +1,10 @@
 package UI;
 import java.util.Scanner;
-import static Controller.User.reUser.reUsers;
+import static Controller.Admin.reAdmin.reAdmins;
+import static UI.UIAdminMenu.adminMenu;
 import static UI.UIMenu.showMenu;
-
-public class UIResgisterUser {
-    public static void registerUser(){
+public class UIRegisterAdmin {
+    public static void registerAdmin(){
         int response = 0;
         do{
             Scanner sc = new Scanner(System.in);
@@ -22,14 +22,14 @@ public class UIResgisterUser {
             response = Integer.parseInt(sc.nextLine());
             switch (response){
                 case 1:
-                    reUsers(name,lastName,nickname,password);
+                    reAdmins(name,lastName,nickname,password);
                     showMenu();
                     break;
                 case 2:
-                    registerUser();
+                    registerAdmin();
                     break;
                 case 3:
-                    showMenu();
+                    adminMenu();
                     break;
                 default:
                     System.out.println("Number error");
