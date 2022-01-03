@@ -1,6 +1,7 @@
 package UI;
 import java.util.Scanner;
 import static Controller.Movie.showMovie.showMovies;
+import static UI.UIAdminMenu.adminMenu;
 import static UI.UIMenu.showMenu;
 import static UI.UIReMovie.reMovie;
 
@@ -23,7 +24,7 @@ public class UIMovie {
                     showMovies();
                 }
                 case 3 ->{
-                    showMenu();
+                    adminMenu();
                 }
                 default -> {
                     System.out.println("error");
