@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Movies {
 
-    public static Map<Integer, Movie> movieList = new HashMap<Integer, Movie>();
+    public static Map<String, Movie> movieList = new HashMap<String, Movie>();
 }
 
 

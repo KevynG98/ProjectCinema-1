@@ -1,4 +1,4 @@
-package Utils;
+package Utils.Auth;
 
 import Model.Admin;
 import Model.User;

@@ -22,16 +22,15 @@ public class reUser{
 
             }else{
                 //Registra nuevos usuarios
-                for (Map.Entry<String,User> data: userList.entrySet()) {
-                    if(data.getValue().getNickname().equals(nickname)){
-                        System.out.println("this name is not available");
-                        System.out.println("please write an available nickname");
-                        sc.nextLine();
-                        registerUser();
-                    }else{
-                        writeNewUser(name,lastName,nickname,password);
-                    }
+                if(userList.containsKey(nickname)){
+                    System.out.println("this name is not available");
+                    System.out.println("please write an available nickname");
+                    sc.nextLine();
+                    registerUser();
+                }else{
+                    writeNewUser(name,lastName,nickname,password);
                 }
+
             }
     } catch(Exception e){
         System.err.println(e.getMessage());

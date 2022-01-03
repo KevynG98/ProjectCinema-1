@@ -13,20 +13,20 @@ public class reMovie {
         try {
             //Recupera movies actuales
             readMovie();
-            if(movieList.size()>=1) {
-                for(Map.Entry<Integer,Movie> data : movieList.entrySet()){
-                    if(data.getValue().getTitle().equals(title)){
-                        System.out.println("This name is not Available");
-                        System.out.println("Please write a title Available");
-                        sc.nextLine();
-                        reMovie();
-                    }else{
-                        writeNewMovie(title, premiere);
-                    }
-                }
-            }else if( movieList.size()<1){
-          //Registra nuevos Movies si no hay ninguno
+            if(movieList.isEmpty()) {
+                //Registra nuevos Movies si no hay ninguno
                 writeMovie(title, premiere);
+            }else{
+
+                if(movieList.containsKey(title)){
+                    System.out.println("This name is not Available");
+                    System.out.println("Please write a title Available");
+                    sc.nextLine();
+                    reMovie();
+                }else{
+                    writeNewMovie(title, premiere);
+                }
+
              }
         } catch(Exception e){
             System.err.println(e.getMessage());

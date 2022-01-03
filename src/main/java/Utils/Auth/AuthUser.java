@@ -1,4 +1,4 @@
-package Utils;
+package Utils.Auth;
 
 import static Model.Admins.adminList;
 import static Model.Users.userList;

@@ -12,6 +12,7 @@ public class CrudAdmin {
             ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
             adminList  = (Map<String, Admin>) recoveryData.readObject();
         } catch (Exception e) {
+            if(e.getMessage() != null)
             System.err.println(e.getMessage());
         }
     }
@@ -23,6 +24,7 @@ public class CrudAdmin {
             writeData.writeObject(adminList);
             writeData.close();
         } catch (Exception e) {
+            if(e.getMessage() != null)
             System.err.println(e.getMessage());
         }
     }
@@ -34,6 +36,7 @@ public class CrudAdmin {
             writeData.writeObject(adminList);
             writeData.close();
         } catch (Exception e) {
+            if(e.getMessage() != null)
             System.err.println(e.getMessage());
         }
     }

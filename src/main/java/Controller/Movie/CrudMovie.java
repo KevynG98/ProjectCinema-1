@@ -10,7 +10,7 @@ public class CrudMovie {
         File file = new File("Data/Movies.txt");
         try{
             ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
-            movieList = (Map<Integer, Movie>) recoveryData.readObject();
+            movieList = (Map<String, Movie>) recoveryData.readObject();
         }catch(Exception e){
             System.err.println(e.getMessage());
         }
@@ -19,7 +19,7 @@ public class CrudMovie {
     public static void writeNewMovie(String title,String premiere){
         try{
             File file = new File("Data/Movies.txt");
-            movieList.put(movieList.size()+1, new Movie(movieList.size()+1,title,premiere));
+            movieList.put(title, new Movie(movieList.size()+1,title,premiere));
             ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
             writeData.writeObject(movieList);
             writeData.close();
@@ -30,7 +30,7 @@ public class CrudMovie {
     public static void writeMovie(String title,String premiere){
         try{
             File file = new File("Data/Movies.txt");
-            movieList.put(1, new Movie(1, title, premiere));
+            movieList.put(title, new Movie(1, title, premiere));
             ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
             writeData.writeObject(movieList);
             writeData.close();

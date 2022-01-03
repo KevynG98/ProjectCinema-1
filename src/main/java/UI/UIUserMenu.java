@@ -1,5 +1,5 @@
 package UI;
-import Utils.UserLogged;
+import Utils.Auth.UserLogged;
 
 import java.util.Scanner;
 import static Controller.Movie.showMovie.showMovies;

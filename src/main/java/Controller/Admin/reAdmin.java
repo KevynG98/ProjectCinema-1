@@ -1,6 +1,4 @@
 package Controller.Admin;
-import Model.Admin;
-import java.util.Map;
 import java.util.Scanner;
 import static Controller.Admin.CrudAdmin.*;
 import static Model.Admins.adminList;
@@ -16,17 +14,17 @@ public class reAdmin {
                 //Registra nuevos usuarios si no hay ninguno.
                 writeAdmin(name,lastName,nickname,password);
             }else{
+
                 //Registra nuevos usuarios admin
-                for (Map.Entry<String, Admin> data: adminList.entrySet()) {
-                    if(data.getValue().getNickname().equals(nickname)){
-                        System.out.println("this name is not available");
-                        System.out.println("please write an available nickname");
-                        sc.nextLine();
-                        registerAdmin();
-                    }else{
-                        writeNewAdmin(name,lastName,nickname,password);
-                    }
+                if(adminList.containsKey(nickname)){
+                    System.out.println("this name is not available");
+                    System.out.println("please write an available nickname");
+                    sc.nextLine();
+                    registerAdmin();
+                }else{
+                    writeNewAdmin(name,lastName,nickname,password);
                 }
+
             }
         } catch(Exception e){
             System.err.println(e.getMessage());

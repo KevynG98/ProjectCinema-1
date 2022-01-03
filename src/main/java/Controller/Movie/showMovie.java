@@ -11,7 +11,7 @@ public class showMovie {
         try{
             //Recupera todos los usuarios existentes
          readMovie();
-            for (Map.Entry<Integer,Movie> data: movieList.entrySet()) {
+            for (Map.Entry<String,Movie> data: movieList.entrySet()) {
                 System.out.println(data.getValue());
             }
         } catch(Exception e){

@@ -6,7 +6,7 @@ import static Controller.Admin.showAdmin.showAdmins;
 import static Controller.User.showUser.showUsers;
 import static UI.UIMenu.showMenu;
 import static UI.UIRegisterAdmin.registerAdmin;
-import Utils.UserLogged;
+import Utils.Auth.UserLogged;
 
 public class UIAdminMenu {
 

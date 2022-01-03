@@ -1,5 +1,5 @@
 package UI;
-import Utils.AuthUser;
+import Utils.Auth.AuthUser;
 
 import java.util.Scanner;
 import static Controller.Admin.CrudAdmin.readAdmin;
