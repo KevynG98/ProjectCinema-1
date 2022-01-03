@@ -15,9 +15,14 @@ public class reUser{
         try{
                 //Recupera usuarios actuales y add nuevos
                   readUser();
-            if(userList.size()>=1) {
+            if(userList.isEmpty()) {
+
+                //Registra nuevos usuarios si no hay ninguno.
+                writeUser(name,lastName,nickname,password);
+
+            }else{
                 //Registra nuevos usuarios
-                for (Map.Entry<Integer,User> data: userList.entrySet()) {
+                for (Map.Entry<String,User> data: userList.entrySet()) {
                     if(data.getValue().getNickname().equals(nickname)){
                         System.out.println("this name is not available");
                         System.out.println("please write an available nickname");
@@ -27,9 +32,6 @@ public class reUser{
                         writeNewUser(name,lastName,nickname,password);
                     }
                 }
-            }else if(userList.size()<1){
-                //Registra nuevos usuarios si no hay ninguno.
-                writeUser(name,lastName,nickname,password);
             }
     } catch(Exception e){
         System.err.println(e.getMessage());

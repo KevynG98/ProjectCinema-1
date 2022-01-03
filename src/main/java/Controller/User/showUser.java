@@ -12,7 +12,7 @@ public class showUser {
             //Recupera todos los usuarios existentes
              readUser();
              //Recorre los usarios existentes
-            for (Map.Entry<Integer,User> data: userList.entrySet()) {
+            for (Map.Entry<String,User> data: userList.entrySet()) {
                 System.out.println(data.getValue());
             }
            } catch(Exception e){

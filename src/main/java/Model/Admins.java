@@ -6,5 +6,5 @@ import java.util.Map;
 
 @Getter @Setter
 public class Admins {
-    public static Map<Integer, Admin> adminList = new HashMap<Integer, Admin>();
+    public static Map<String, Admin> adminList = new HashMap<String, Admin>();
 }

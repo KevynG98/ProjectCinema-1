@@ -12,7 +12,7 @@ public class UIAdminMenu {
         do {
             System.out.println();
             System.out.println("User");
-            System.out.println("Welcome " + UIAuthUser.adminlogged.getNickname());
+            System.out.println("Welcome " + userLogged.adminLogged.getNickname());
             System.out.println("1. Show users");
             System.out.println("2.Register admin");
             System.out.println("3.Show Admin");

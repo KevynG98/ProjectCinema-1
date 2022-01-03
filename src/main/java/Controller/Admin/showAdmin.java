@@ -12,7 +12,7 @@ public class showAdmin {
             //Recupera todos los usuarios admin existentes
             readAdmin();
             //Recorre los usuarios admin existentes
-            for (Map.Entry<Integer, Admin> data: adminList.entrySet()) {
+            for (Map.Entry<String, Admin> data: adminList.entrySet()) {
                 System.out.println(data.getValue());
             }
         } catch(Exception e){
