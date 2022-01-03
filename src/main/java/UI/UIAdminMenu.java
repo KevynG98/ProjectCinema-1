@@ -1,9 +1,12 @@
 package UI;
+
+
 import java.util.Scanner;
 import static Controller.Admin.showAdmin.showAdmins;
 import static Controller.User.showUser.showUsers;
 import static UI.UIMenu.showMenu;
 import static UI.UIRegisterAdmin.registerAdmin;
+import Utils.UserLogged;
 
 public class UIAdminMenu {
 
@@ -12,7 +15,7 @@ public class UIAdminMenu {
         do {
             System.out.println();
             System.out.println("User");
-            System.out.println("Welcome " + userLogged.adminLogged.getNickname());
+            System.out.println("Welcome " + UserLogged.adminLogged.getNickname());
             System.out.println("1. Show users");
             System.out.println("2.Register admin");
             System.out.println("3.Show Admin");
