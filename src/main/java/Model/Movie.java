@@ -17,7 +17,7 @@ public class Movie implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Movie{" +
                 "id=" + id +
                 ", Title='" + getTitle() + '\'' +
                 ", Premiere='" + getPremiere() + '\'' +
