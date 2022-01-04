@@ -17,16 +17,9 @@ public class showMovie {
         } catch(Exception e){
             System.out.println(e.getMessage());
         }
-        int response;
-        do {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("1.Back");
-            response = Integer.parseInt(sc.nextLine());
-            if (response == 1) {
-                userMenu();
-            } else {
-                System.out.println("Error");
-            }
-        }while(response!=0);
+
+
+        Scanner sc = new Scanner(System.in);
+
     }
 }

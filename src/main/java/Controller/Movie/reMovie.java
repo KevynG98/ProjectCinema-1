@@ -8,14 +8,14 @@ import static UI.UIReMovie.reMovie;
 
 public class reMovie {
 
-    public static void reMovies(String title,String premiere){
+    public static void reMovies(String title,String premiere, int price){
         Scanner sc = new Scanner(System.in);
         try {
             //Recupera movies actuales
             readMovie();
             if(movieList.isEmpty()) {
                 //Registra nuevos Movies si no hay ninguno
-                writeMovie(title, premiere);
+                writeMovie(title, premiere,price);
             }else{
 
                 if(movieList.containsKey(title)){
@@ -24,7 +24,7 @@ public class reMovie {
                     sc.nextLine();
                     reMovie();
                 }else{
-                    writeNewMovie(title, premiere);
+                    writeNewMovie(title, premiere, price);
                 }
 
              }

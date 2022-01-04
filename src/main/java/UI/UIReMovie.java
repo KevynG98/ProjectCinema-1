@@ -10,15 +10,18 @@ public class UIReMovie {
         do{
             System.out.println("Title movie");
             String title = sc.nextLine();
+            System.out.println("Ticket price");
+            String price = sc.nextLine();
             System.out.println("Premiere date (DD-MM-YY)");
             String premiere = sc.nextLine();
+
             System.out.println("1.Confirm");
             System.out.println("2.To rewrite");
             System.out.println("3.back");
             response = Integer.parseInt(sc.nextLine());
             switch (response){
                 case 1 ->{
-                    reMovies(title,premiere);
+                    reMovies(title,premiere,Integer.parseInt(price));
                     movieMenu();
                 }
                 case 2 -> reMovie();

@@ -6,8 +6,9 @@ import static UI.UIResgisterUser.registerUser;
 public class UIMenu {
 public static void showMenu() {
     System.out.println("Welcome to the Menu");
-    int response;
-    do {
+    int response = 9;
+
+    while(0 != response){
         System.out.println("Choose an Option");
         System.out.println("1.Login");
         System.out.println("2.Register User");
@@ -17,10 +18,12 @@ public static void showMenu() {
         switch (response) {
             case 1 -> authUserC();
             case 2 -> registerUser();
-            case 0 -> System.out.println("Thank you for your Visit");
+            case 0 -> response=0;
             default -> System.out.println("Invalid Option");
         }
-    } while (0 != response);
+    }
+
+
    }
 }
 

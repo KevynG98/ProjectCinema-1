@@ -18,7 +18,7 @@ public class UIUserMenu {
             response = Integer.parseInt(sc.nextLine());
             switch (response){
                 case 1 -> showMovies();
-                case 0 -> showMenu();
+                case 0 -> response = 0;
                 default -> System.out.println("The Number is not valid");
             }
         } while(response != 0);

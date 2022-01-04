@@ -14,10 +14,11 @@ public class Movie implements Serializable {
     private long id;
     private String title;
     private String premiere;
+    private int price;
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Movie{" +
                 "id=" + id +
                 ", Title='" + getTitle() + '\'' +
                 ", Premiere='" + getPremiere() + '\'' +

@@ -13,8 +13,8 @@ public class roomOrder {
         JFileChooser finalFile = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Plain Text", "txt");
         file.setFileFilter(filter);
-        int returnval = file.showOpenDialog(null);
-        if (returnval == JFileChooser.APPROVE_OPTION){
+        int returnVal = file.showOpenDialog(null);
+        if (returnVal == JFileChooser.APPROVE_OPTION){
             finalFile = file;
             //System.out.println(file.getSelectedFile().getName());
         } else{
@@ -37,8 +37,6 @@ public class roomOrder {
             e.printStackTrace();
         }
     }
-
-
 
     public void mainFunction(){
         readFile(

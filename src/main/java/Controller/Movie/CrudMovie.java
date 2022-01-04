@@ -16,10 +16,10 @@ public class CrudMovie {
         }
 
     }
-    public static void writeNewMovie(String title,String premiere){
+    public static void writeNewMovie(String title,String premiere,int price){
         try{
             File file = new File("Data/Movies.txt");
-            movieList.put(title, new Movie(movieList.size()+1,title,premiere));
+            movieList.put(title, new Movie(movieList.size()+1,title,premiere, price));
             ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
             writeData.writeObject(movieList);
             writeData.close();
@@ -27,10 +27,10 @@ public class CrudMovie {
             System.err.println(e.getMessage());
         }
     }
-    public static void writeMovie(String title,String premiere){
+    public static void writeMovie(String title,String premiere, int price){
         try{
             File file = new File("Data/Movies.txt");
-            movieList.put(title, new Movie(1, title, premiere));
+            movieList.put(title, new Movie(1, title, premiere, price));
             ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
             writeData.writeObject(movieList);
             writeData.close();

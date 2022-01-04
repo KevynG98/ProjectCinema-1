@@ -25,7 +25,7 @@ public class AuthUser {
                 adminMenu();
                 return true;
             } else {
-                System.out.println("Password doesn't match");
+                System.out.println("Invalid User or Password");
                 return false;
             }
 
@@ -36,7 +36,7 @@ public class AuthUser {
                 userMenu();
                 return true;
             } else {
-                System.out.println("Password doesn't match");
+                System.out.println("Invalid User or Password");
                 return false;
             }
         } else {
