@@ -17,6 +17,7 @@ public class Room implements Serializable {
     int sits[][];
 
 
+
     public void init(){
        for (int i = 0; i< sits.length ; i++){
            for(int j = 0; j< sits.length; j++){
