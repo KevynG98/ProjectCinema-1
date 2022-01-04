@@ -1,14 +1,19 @@
 package Model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
 
 @AllArgsConstructor
-public class room {
+@Setter
+@Getter
+public class Room implements Serializable {
 
     long id;
     String name;
     String date;
-   // Boolean[][] sits;
     int sits[][];
 
 
@@ -37,7 +42,6 @@ public class room {
           ++c;
           System.out.println();
           }
-
       }
 
     public void activateSit(String row, int col){
@@ -52,5 +56,12 @@ public class room {
         }
 
         sits[x][col-1] = 1;
+    }
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", Name='" + getName() + '\'' +
+                '}';
     }
 }
