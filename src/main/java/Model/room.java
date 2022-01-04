@@ -44,7 +44,7 @@ public class room {
         int x = 0;
 
         for(; c <= 'Z'; ++c){
-            if(row.equals(c)){
+            if(row.equals(Character.toString(c))){
                 break;
             }
             x++;

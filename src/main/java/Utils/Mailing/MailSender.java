@@ -1,7 +1,7 @@
 package Utils.Mailing;
 
 import java.util.Properties;
-import javax.mail.Session;
+
 
 public class MailSender {
     // Envia reporte al admin,
@@ -16,7 +16,7 @@ public class MailSender {
         String myAccountEmail = "emanuelprisker@gmail.com";
         String password = "Librosimvarrote1";
 
-        Session session = Session.getInstance
+
 
     }
 }
