@@ -15,6 +15,10 @@ public class Ticket {
     private int price;
     private String seat;
 
+    public Ticket(){
+
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +

@@ -7,7 +7,7 @@ import static Controller.User.CrudUser.readUser;
 
 public class UIAuthUser {
 
-public static void authUserC(){
+public static void authUserC() throws Exception {
 
     AuthUser loginSys;
     boolean userCorrect;

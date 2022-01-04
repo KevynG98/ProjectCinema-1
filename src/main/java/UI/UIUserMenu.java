@@ -4,10 +4,10 @@ import Utils.Auth.UserLogged;
 
 import java.util.Scanner;
 import static Controller.Movie.showMovie.showMovies;
-import static Controller.RoomMovie.showRoomMovie.showRoomMovies;
+import static UI.UITicketMenu.UIBuyTicket;
 
 public class UIUserMenu {
-    public static void userMenu(){
+    public static void userMenu() throws Exception {
         int response = 0;
         do {
             System.out.println();
@@ -21,7 +21,7 @@ public class UIUserMenu {
 
             switch (response){
                 case 1 -> showMovies();
-                case 2 -> showRoomMovies();
+                case 2 -> UIBuyTicket();
                 case 0 -> response = 0;
                 default -> System.out.println("The Number is not valid");
             }

@@ -7,6 +7,8 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.Locale;
 
+import static Controller.Room.CrudRoom.updateRoom;
+
 @AllArgsConstructor
 @Setter
 @Getter
@@ -25,6 +27,7 @@ public class Room implements Serializable {
                sits[i][j] = 0;
            }
        }
+       updateRoom();
    }
 
   public void print(){

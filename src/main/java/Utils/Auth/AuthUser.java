@@ -14,7 +14,7 @@ public class AuthUser {
     String nickName;
     String passWord;
 
-    public boolean userLogin() {
+    public boolean userLogin() throws Exception {
 
         if (adminList.containsKey(nickName)) {
 

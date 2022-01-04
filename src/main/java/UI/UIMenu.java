@@ -4,7 +4,7 @@ import static UI.UIAuthUser.authUserC;
 import static UI.UIResgisterUser.registerUser;
 
 public class UIMenu {
-public static void showMenu() {
+public static void showMenu() throws Exception {
     System.out.println("Welcome to the Menu");
     int response = 9;
 
