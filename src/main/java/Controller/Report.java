@@ -1,17 +1,14 @@
 package Controller;
+
 import static Controller.Movie.CrudMovie.readMovie;
 import static Model.Movies.movieList;
 
 public class Report {
 
-    public static void print() {
-        readMovie();
-
-    }
 
     void ticketSold(String title, int price, int numTickets){
+        readMovie();
         int sold = 0;
-
         if (movieList.containsKey(title)) {
             sold += numTickets;
         }
