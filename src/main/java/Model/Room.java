@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Locale;
 
 @AllArgsConstructor
 @Setter
@@ -25,6 +26,7 @@ public class Room implements Serializable {
            }
        }
    }
+
   public void print(){
       int x = 0;
       char c = 'A';

@@ -42,4 +42,14 @@ public class CrudRoom {
             System.err.println(e.getMessage());
         }
     }
+    public static void updateRoom(){
+        try{
+            File file = new File("Data/Room.txt");
+            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
+            writeData.writeObject(roomList);
+            writeData.close();
+        }catch(Exception e){
+            System.err.println(e.getMessage());
+        }
+    }
 }

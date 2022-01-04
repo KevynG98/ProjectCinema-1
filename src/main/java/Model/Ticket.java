@@ -11,7 +11,7 @@ import lombok.Setter;
 public class Ticket {
     private String movieTitle;
     private String Date;
-    private int ticketAmount;
+    private int sitsAmount;
     private int price;
     private String seat;
 
@@ -20,7 +20,7 @@ public class Ticket {
         return "Ticket{" +
                 "MovieTitle='" + getMovieTitle() + '\'' +
                 "Date='" + getDate() + '\'' +
-                "Amount='" + getTicketAmount() + '\'' +
+                "Amount='" + getSitsAmount() + '\'' +
                 "Price='" + getPrice() + '\'' +
                 "Seat='" + getSeat() + '\'' +
                 "}";
