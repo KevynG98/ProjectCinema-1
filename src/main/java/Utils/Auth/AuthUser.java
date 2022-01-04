@@ -1,20 +1,18 @@
 package Utils.Auth;
 
+import lombok.AllArgsConstructor;
+
 import static Model.Admins.adminList;
 import static Model.Users.userList;
 import static UI.UIAdminMenu.adminMenu;
 import static UI.UIUserMenu.userMenu;
 
+@AllArgsConstructor
 
 public class AuthUser {
 
     String nickName;
     String passWord;
-
-    public AuthUser(String nickName, String passWord) {
-        this.nickName = nickName;
-        this.passWord = passWord;
-    }
 
     public boolean userLogin() {
 

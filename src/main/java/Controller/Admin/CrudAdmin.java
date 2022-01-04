@@ -11,6 +11,7 @@ public class CrudAdmin {
             //Recupera usuarios actuales y add nuevos
             ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
             adminList  = (Map<String, Admin>) recoveryData.readObject();
+            recoveryData.close();
         } catch (Exception e) {
             if(e.getMessage() != null)
             System.err.println(e.getMessage());

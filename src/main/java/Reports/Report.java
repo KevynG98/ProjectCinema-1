@@ -1,9 +1,9 @@
-package Controller;
+package Reports;
 
 import static Controller.Movie.CrudMovie.readMovie;
 import static Model.Movies.movieList;
 
-public class Report {
+public class Report{
 
 
     void ticketSold(String title, int price, int numTickets){
@@ -14,15 +14,17 @@ public class Report {
         }
             int total = sold * numTickets;
        }
+
 }
 
-/*spider
+/*
+* que pelicula quieres ?
+* cuando la quieres?
+* mostrar matris
+* cuantos tickets ? 3
+* cuales asientos ?
+* el precio es x
+* confirmar ?
+* - > title, price, numTickets
 
-1
-
-5 USD
-
-1 2 3
-
-*/
-//--> title precio numTickets
+ */
