@@ -35,7 +35,11 @@ public class Report {
         File file = new File("Data/Report.txt");
         try{
             BufferedReader reader = new BufferedReader(new FileReader(file));
-
+           String linea = reader.readLine();
+           while(linea != null){
+               System.out.println(linea);
+               linea = reader.readLine();
+           }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
