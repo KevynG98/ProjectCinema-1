@@ -11,6 +11,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 
 public class Movie implements Serializable {
+
+    private static final long serialVersionUID = 2L;
     private long id;
     private String title;
     private String premiere;
@@ -22,6 +24,7 @@ public class Movie implements Serializable {
                 "id=" + id +
                 ", Title='" + getTitle() + '\'' +
                 ", Premiere='" + getPremiere() + '\'' +
+                ", price='" + getPrice() + '\'' +
                 '}';
     }
 }

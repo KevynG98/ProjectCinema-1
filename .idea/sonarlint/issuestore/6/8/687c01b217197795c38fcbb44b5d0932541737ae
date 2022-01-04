@@ -1,12 +1,0 @@
-
-?
-java:S2386	"Make this member "protected".(„²¥áıÿÿÿÿ8ÈåÊÎİ/
-U
-java:S1118":Add a private constructor to hide the implicit public one.(ÇÀÑËøÿÿÿÿ
-{
-java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(„²¥áıÿÿÿÿ8ÆÉÊİ/
-v
-java:S1104	"TMake userList a static final constant or non-public and provide accessors if needed.(„²¥áıÿÿÿÿ8ÌåÊÎİ/
-P
-java:S1444	".Make this "public static userList" field final(„²¥áıÿÿÿÿ8ÌåÊÎİ/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á–Ì“
