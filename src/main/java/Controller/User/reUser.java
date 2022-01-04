@@ -1,7 +1,5 @@
 package Controller.User;
-import Model.User;
 
-import java.util.Map;
 import java.util.Scanner;
 
 import static Controller.User.CrudUser.*;

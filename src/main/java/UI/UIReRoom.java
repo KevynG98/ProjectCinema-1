@@ -19,11 +19,13 @@ public class UIReRoom {
                 response = Integer.parseInt(sc.nextLine());
 
                 switch (response) {
-                    case 1-> reRooms(name,date);
+                    case 1->{
+                        reRooms(name,date);
+                        response = 0;
+                    }
                     case 2-> response = 0;
                     default -> System.out.println("invalid option");
                 }
-
             }while(response != 0);
     }
 }

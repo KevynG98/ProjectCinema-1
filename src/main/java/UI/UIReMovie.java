@@ -22,11 +22,11 @@ public class UIReMovie {
             switch (response){
                 case 1 ->{
                     reMovies(title,premiere,Integer.parseInt(price));
-                    movieMenu();
+                    response = 0;
                 }
                 case 2 -> reMovie();
-                case 3 -> movieMenu();
-                default -> System.out.println("error");
+                case 3 -> response= 0;
+                default -> System.out.println("Option invalid");
             }
         }while(response != 0);
     }

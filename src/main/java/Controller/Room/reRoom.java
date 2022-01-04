@@ -20,7 +20,7 @@ public class reRoom {
                     System.out.println("this name is not available");
                     System.out.println("please write an available name");
                     sc.nextLine();
-                    IreRoom();
+                   // IreRoom();
                 }else{
                     writeNewRoom(name,date);
                 }

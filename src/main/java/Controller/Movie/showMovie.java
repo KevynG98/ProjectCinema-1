@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.Scanner;
 import static Model.Movies.movieList;
 import static Controller.Movie.CrudMovie.readMovie;
-import static UI.UIUserMenu.userMenu;
 
 public class showMovie {
     public static void showMovies(){

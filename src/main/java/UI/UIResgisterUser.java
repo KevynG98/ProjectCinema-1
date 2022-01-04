@@ -21,19 +21,13 @@ public class UIResgisterUser {
             System.out.println("3.exit");
             response = Integer.parseInt(sc.nextLine());
             switch (response){
-                case 1:
+                case 1 ->{
                     reUsers(name,lastName,nickname,password);
-                    showMenu();
-                    break;
-                case 2:
-                    registerUser();
-                    break;
-                case 3:
-                    showMenu();
-                    break;
-                default:
-                    System.out.println("Number error");
-                    break;
+                    response = 0;
+                }
+                case 2 -> registerUser();
+                case 3 -> response = 0;
+                default -> System.out.println("Option invalid");
             }
         }while(response != 0);
     }

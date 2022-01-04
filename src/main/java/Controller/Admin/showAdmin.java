@@ -18,16 +18,7 @@ public class showAdmin {
         } catch(Exception e){
             System.out.println(e.getMessage());
         }
-        int response;
-        do {
             Scanner sc = new Scanner(System.in);
-            System.out.println("1.Back");
-            response = Integer.parseInt(sc.nextLine());
-            if (response == 1) {
-                adminMenu();
-            } else {
-                System.out.println("Error");
-            }
-        }while(response!=0);
+            sc.nextLine();
     }
 }

@@ -23,7 +23,7 @@ public class UIMovie {
                     showMovies();
                 }
                 case 3 ->{
-                    showMenu();
+                    response = 0;
                 }
                 default -> {
                     System.out.println("error");
