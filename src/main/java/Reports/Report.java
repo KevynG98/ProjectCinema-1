@@ -3,13 +3,13 @@ package Reports;
 
 import java.io.*;
 
-import static Controller.Movie.CrudMovie.readMovie;
+
 import static Model.MovieModel.Movies.movieList;
 
 public class Report {
 
     void ticketSold(String title, int price, int numTickets){
-        readMovie();
+
         int sold = 0;
         if (movieList.containsKey(title)) {
             sold += numTickets;

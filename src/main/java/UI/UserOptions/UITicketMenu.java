@@ -1,12 +1,12 @@
 package UI.UserOptions;
 
+import Controller.Movie.CrudMovie;
 import Model.RoomMovieModel.RoomMovie;
 import Model.TicketModel.Ticket;
 
 import java.util.Map;
 import java.util.Scanner;
 
-import static Controller.Movie.CrudMovie.readMovie;
 import static Controller.Room.CrudRoom.readRoom;
 import static Controller.Room.CrudRoom.updateRoom;
 import static Controller.RoomMovie.showRoomMovie.showRoomMovies;
@@ -26,7 +26,7 @@ public class UITicketMenu {
         StringBuilder Seat = new StringBuilder();
         System.out.println("Choose number movie");
         response = Integer.parseInt(sc.nextLine());
-
+        CrudMovie movie = new CrudMovie();
 
         for (Map.Entry<Integer, RoomMovie> data: roomMovieList.entrySet()) {
             if(data.getKey().equals(response)){
@@ -34,8 +34,8 @@ public class UITicketMenu {
                 String movieKey = data.getValue().getTitle();
                 movieKey = movieKey.toLowerCase();
                 System.out.println(movieKey);
-                readMovie();
-                readRoom();
+                movie.read();
+
                 if(roomList.containsKey(roomKey) && movieList.containsKey(movieKey)){
                     System.out.println(movieKey);
                     System.out.println(roomKey.toUpperCase());
