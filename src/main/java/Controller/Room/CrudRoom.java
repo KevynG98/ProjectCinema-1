@@ -1,55 +1,44 @@
 package Controller.Room;
-import Model.RoomModel.Room;
-import java.io.*;
-import java.util.Map;
 
+import Model.RoomModel.Room;
+import Utils.Files.FileManage;
+import Utils.Interfaces.ICrud;
+import java.util.Map;
+import static Model.MovieModel.Movies.movieList;
 import static Model.RoomModel.Rooms.roomList;
 
-public class CrudRoom {
-    public static void readRoom() {
+public class CrudRoom implements ICrud {
+    Room room;
+    FileManage file;
+    public CrudRoom(){file = new FileManage("Room");}
+    public Room getRoom() {
+        return room;
+    }
+    public void setRoom(String name,String date){
+        int sits[][] = new int[5][5];
+        this.room = new Room((roomList.isEmpty())?1:movieList.size()+1,name,date,sits);
+    }
+    @Override
+    public void read() {
         try {
-            File file = new File("Data/Room.txt");
-            //Recupera usuarios actuales y add nuevos
-            ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
-            roomList  = (Map<String, Room>) recoveryData.readObject();
-            recoveryData.close();
+            this.file.setInput();
+            roomList  = (Map<String, Room>) this.file.getInput() ;
+            this.file.closeInputStream();
         } catch (Exception e) {
             if(e.getMessage() != null)
                 System.err.println(e.getMessage());
         }
     }
-    public static void writeNewRoom(String name,String date){
-        try{
-            File file = new File("Data/Room.txt");
-            int sits[][] = new int[5][5];
-            roomList.put(name, new Room(roomList.size()+1,name,date,sits));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(roomList);
-            writeData.close();
-        }catch(Exception e){
-            System.err.println(e.getMessage());
+    @Override
+    public void write() {
+        try {
+            roomList.put(room.getName(),getRoom());
+            this.file.OutputStreamProcess(roomList);
+        } catch (Exception e) {
+            if(e.getMessage() != null)
+                System.err.println(e.getMessage());
         }
     }
-    public static void writeRoom(String name,String date){
-        try{
-            int sits[][] = new int[5][5];
-            File file = new File("Data/Room.txt");
-            roomList.put(name, new Room(1,name,date,sits));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(roomList);
-            writeData.close();
-        }catch (Exception e){
-            System.err.println(e.getMessage());
-        }
-    }
-    public static void updateRoom(){
-        try{
-            File file = new File("Data/Room.txt");
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(roomList);
-            writeData.close();
-        }catch(Exception e){
-            System.err.println(e.getMessage());
-        }
-    }
+
+
 }

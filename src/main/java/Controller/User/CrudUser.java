@@ -1,42 +1,52 @@
 package Controller.User;
 
+import Model.AdminModel.Admin;
 import Model.UserModel.User;
+import Utils.Files.FileManage;
+import Utils.Interfaces.ICrud;
 
 import java.io.*;
 import java.util.Map;
+
+import static Model.AdminModel.Admins.adminList;
 import static Model.UserModel.Users.userList;
 
-public class CrudUser {
-    public static void readUser() {
+public class CrudUser implements ICrud {
+    FileManage a;
+    User user;
+
+    public CrudUser(){
+        this.a = new FileManage("Data");
+    }
+    public void setUser(String name, String lastName, String nickname, String password) {
+        this.user = new User((userList.isEmpty())?1:userList.size() + 1, name, lastName, nickname, password);
+    }
+    public User getUser(){
+        return this.user;
+    }
+    @Override
+    public void read() {
         try {
-            File file = new File("Data/Data.txt");
-            //Recupera usuarios actuales y add nuevos
-            ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
-            userList = (Map<String, User>) recoveryData.readObject();
+            this.a.setInput();
+            userList  = (Map<String, User>) this.a.getInput() ;
+            this.a.closeInputStream();
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+            if(e.getMessage() != null)
+                System.err.println(e.getMessage());
         }
     }
-    public static void writeNewUser(String name, String lastName, String nickname, String password) {
+
+    @Override
+    public void write() {
         try {
-            File file = new File("Data/Data.txt");
-            userList.put(nickname, new User(userList.size() + 1, name, lastName, nickname, password));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(userList);
-            writeData.close();
+            userList.put(user.getNickname(), getUser());
+            a.OutputStreamProcess(userList);
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+            if(e.getMessage() != null)
+                System.err.println(e.getMessage());
         }
     }
-    public static void writeUser(String name, String lastName, String nickname, String password) {
-        try {
-            File file = new File("Data/Data.txt");
-            userList.put(nickname, new User(1, name, lastName, nickname, password));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(userList);
-            writeData.close();
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-    }
+
 }
+
+

@@ -12,13 +12,8 @@ public class reUser{
         Scanner sc = new Scanner(System.in);
         try{
                 //Recupera usuarios actuales y add nuevos
-                  readUser();
-            if(userList.isEmpty()) {
-
-                //Registra nuevos usuarios si no hay ninguno.
-                writeUser(name,lastName,nickname,password);
-
-            }else{
+            CrudUser user = new CrudUser();
+            user.read();
                 //Registra nuevos usuarios
                 if(userList.containsKey(nickname)){
                     System.out.println("this name is not available");
@@ -26,10 +21,9 @@ public class reUser{
                     sc.nextLine();
                     registerUser();
                 }else{
-                    writeNewUser(name,lastName,nickname,password);
+                    user.setUser(name,lastName,nickname,password);
+                    user.write();
                 }
-
-            }
     } catch(Exception e){
         System.err.println(e.getMessage());
      }
