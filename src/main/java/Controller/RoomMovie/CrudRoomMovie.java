@@ -1,10 +1,10 @@
 package Controller.RoomMovie;
 
 
-import Model.RoomMovie;
+import Model.RoomMovieModel.RoomMovie;
 import java.io.*;
 import java.util.Map;
-import static Model.RoomMovies.roomMovieList;
+import static Model.RoomMovieModel.RoomMovies.roomMovieList;
 
 
 public class CrudRoomMovie {

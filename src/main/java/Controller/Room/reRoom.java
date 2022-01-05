@@ -2,8 +2,7 @@ package Controller.Room;
 
 import java.util.Scanner;
 import static Controller.Room.CrudRoom.*;
-import static Model.Rooms.roomList;
-import static UI.UIReRoom.IreRoom;
+import static Model.RoomModel.Rooms.roomList;
 
 public class reRoom {
     public static void reRooms(String name,String date){

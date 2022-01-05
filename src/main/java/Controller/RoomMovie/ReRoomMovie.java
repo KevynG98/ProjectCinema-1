@@ -1,14 +1,13 @@
 package Controller.RoomMovie;
 
-import Model.RoomMovie;
-import Model.RoomMovies;
+import Model.RoomMovieModel.RoomMovie;
 
 import java.util.Map;
 import java.util.Scanner;
 
 import static Controller.RoomMovie.CrudRoomMovie.*;
-import static Model.RoomMovies.roomMovieList;
-import static UI.UIRegisterRoomMovie.reRoomMovie;
+import static Model.RoomMovieModel.RoomMovies.roomMovieList;
+import static UI.AdminOptions.RoomOptions.UIRegisterRoomMovie.reRoomMovie;
 
 
 public class ReRoomMovie {

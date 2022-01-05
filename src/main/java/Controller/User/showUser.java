@@ -1,9 +1,9 @@
 package Controller.User;
-import Model.User;
+import Model.UserModel.User;
 import java.util.Map;
 import java.util.Scanner;
 import static Controller.User.CrudUser.readUser;
-import static Model.Users.userList;
+import static Model.UserModel.Users.userList;
 
 
 public class showUser {

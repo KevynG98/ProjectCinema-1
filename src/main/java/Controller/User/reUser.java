@@ -3,7 +3,7 @@ package Controller.User;
 import java.util.Scanner;
 
 import static Controller.User.CrudUser.*;
-import static Model.Users.userList;
+import static Model.UserModel.Users.userList;
 import static UI.UIResgisterUser.registerUser;
 
 public class reUser{

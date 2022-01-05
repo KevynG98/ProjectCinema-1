@@ -1,10 +1,10 @@
 package Controller.User;
 
-import Model.User;
+import Model.UserModel.User;
 
 import java.io.*;
 import java.util.Map;
-import static Model.Users.userList;
+import static Model.UserModel.Users.userList;
 
 public class CrudUser {
     public static void readUser() {

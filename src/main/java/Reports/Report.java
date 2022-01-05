@@ -4,7 +4,7 @@ package Reports;
 import java.io.*;
 
 import static Controller.Movie.CrudMovie.readMovie;
-import static Model.Movies.movieList;
+import static Model.MovieModel.Movies.movieList;
 
 public class Report {
 

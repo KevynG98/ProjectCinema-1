@@ -2,10 +2,10 @@ package Utils.Auth;
 
 import lombok.AllArgsConstructor;
 
-import static Model.Admins.adminList;
-import static Model.Users.userList;
-import static UI.UIAdminMenu.adminMenu;
-import static UI.UIUserMenu.userMenu;
+import static Model.AdminModel.Admins.adminList;
+import static Model.UserModel.Users.userList;
+import static UI.AdminOptions.UIAdminMenu.adminMenu;
+import static UI.UserOptions.UIUserMenu.userMenu;
 
 @AllArgsConstructor
 

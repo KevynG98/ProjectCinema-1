@@ -1,15 +1,16 @@
 package Controller.Movie;
-import Model.Movie;
+import Model.MovieModel.Movie;
 import java.util.Map;
 import java.util.Scanner;
-import static Model.Movies.movieList;
-import static Controller.Movie.CrudMovie.readMovie;
+
+import static Model.MovieModel.Movies.movieList;
 
 public class showMovie {
     public static void showMovies(){
         try{
             //Recupera todos los usuarios existentes
-         readMovie();
+            CrudMovie readMovie = new CrudMovie();
+            readMovie.read();
             for (Map.Entry<String,Movie> data: movieList.entrySet()) {
                 System.out.println(data.getValue());
             }

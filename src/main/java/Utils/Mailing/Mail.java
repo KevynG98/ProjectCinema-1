@@ -1,6 +1,6 @@
 package Utils.Mailing;
 
-import Model.Ticket;
+import Model.TicketModel.Ticket;
 
 import java.util.Scanner;
 

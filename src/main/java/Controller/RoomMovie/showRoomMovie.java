@@ -1,16 +1,11 @@
 package Controller.RoomMovie;
 
-import Model.Room;
-import Model.RoomMovie;
+import Model.RoomMovieModel.RoomMovie;
 
 import java.util.Map;
-import java.util.Scanner;
 
-import static Controller.Room.CrudRoom.readRoom;
-import static Controller.Room.CrudRoom.updateRoom;
 import static Controller.RoomMovie.CrudRoomMovie.readRoomMovie;
-import static Model.RoomMovies.roomMovieList;
-import static Model.Rooms.roomList;
+import static Model.RoomMovieModel.RoomMovies.roomMovieList;
 
 public class showRoomMovie {
     public static void showRoomMovies(){

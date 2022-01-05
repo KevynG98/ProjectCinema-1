@@ -1,9 +1,9 @@
 package Controller.Room;
-import Model.Room;
+import Model.RoomModel.Room;
 import java.io.*;
 import java.util.Map;
 
-import static Model.Rooms.roomList;
+import static Model.RoomModel.Rooms.roomList;
 
 public class CrudRoom {
     public static void readRoom() {

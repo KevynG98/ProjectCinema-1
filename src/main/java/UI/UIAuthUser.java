@@ -1,4 +1,5 @@
 package UI;
+import Controller.Admin.CrudAdmin;
 import Utils.Auth.AuthUser;
 
 import java.util.Scanner;
@@ -12,6 +13,7 @@ public static void authUserC() throws Exception {
     AuthUser loginSys;
     boolean userCorrect;
     Scanner sc = new Scanner(System.in);
+    CrudAdmin a = new CrudAdmin();
 
     do {
         System.out.println("Insert your nickname");
@@ -19,7 +21,7 @@ public static void authUserC() throws Exception {
         System.out.println("Insert your password");
         String password = sc.nextLine();
 
-        readAdmin();
+        a.read();
         readUser();
 
         loginSys = new AuthUser(nickname,password);

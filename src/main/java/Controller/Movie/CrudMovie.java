@@ -1,42 +1,55 @@
 package Controller.Movie;
-import Model.Movie;
+import Model.AdminModel.Admin;
+import Model.MovieModel.Movie;
+import Utils.Files.FileManage;
+import Utils.Interfaces.ICrud;
+
 import java.io.*;
 import java.util.Map;
-import static Model.Movies.movieList;
 
-public class CrudMovie {
+import static Model.AdminModel.Admins.adminList;
+import static Model.MovieModel.Movies.movieList;
 
-    public static void readMovie(){
-        File file = new File("Data/Movies.txt");
-        try{
-            ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
-            movieList = (Map<String, Movie>) recoveryData.readObject();
-        }catch(Exception e){
-            System.err.println(e.getMessage());
-        }
+public class CrudMovie implements ICrud {
 
-    }
-    public static void writeNewMovie(String title,String premiere,int price){
-        try{
-            File file = new File("Data/Movies.txt");
-            movieList.put(title, new Movie(movieList.size()+1,title,premiere, price));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(movieList);
-            writeData.close();
-        }catch(Exception e){
-            System.err.println(e.getMessage());
-        }
-    }
-    public static void writeMovie(String title,String premiere, int price){
-        try{
-            File file = new File("Data/Movies.txt");
-            movieList.put(title, new Movie(1, title, premiere, price));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(movieList);
-            writeData.close();
-        }catch (Exception e){
-            System.err.println(e.getMessage());
-        }
+    Movie movie;
+    FileManage file;
+
+    public CrudMovie(){
+        file = new FileManage("Movies");
     }
 
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(String title,String premiere,int price){
+
+            this.movie = new Movie((movieList.isEmpty())?1:movieList.size()+1,title,premiere, price);
+
+    }
+
+
+    @Override
+    public void read() {
+        try {
+            this.file.setInput();
+            adminList  = (Map<String, Admin>) this.file.getInput() ;
+            this.file.closeInputStream();
+        } catch (Exception e) {
+            if(e.getMessage() != null)
+                System.err.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void write() {
+        try {
+            movieList.put(movie.getTitle(),getMovie());
+            this.file.OutputStreamProcess(adminList);
+        } catch (Exception e) {
+            if(e.getMessage() != null)
+                System.err.println(e.getMessage());
+        }
+    }
 }

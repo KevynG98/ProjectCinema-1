@@ -1,9 +1,9 @@
 package Utils.Auth;
 
-import Model.Admin;
-import Model.User;
-import static Model.Admins.adminList;
-import static Model.Users.userList;
+import Model.AdminModel.Admin;
+import Model.UserModel.User;
+import static Model.AdminModel.Admins.adminList;
+import static Model.UserModel.Users.userList;
 
 
 public class UserLogged {
