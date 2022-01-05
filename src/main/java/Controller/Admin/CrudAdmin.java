@@ -12,26 +12,18 @@ import static Model.AdminModel.Admins.adminList;
 public class CrudAdmin implements ICrud {
 
     FileManage a;
-
     Admin admin;
 
     public CrudAdmin(){
         this.a = new FileManage("Admin");
     }
-
-    public static void readAdmin() {
-
-    }
     public void setAdmin(String name, String lastName, String nickname, String password) {
-
         this.admin = new Admin((adminList.isEmpty())?1:adminList.size() + 1, name, lastName, nickname, password);
-
     }
 
     public Admin getAdmin(){
         return this.admin;
     }
-
 
     @Override
     public void read() {

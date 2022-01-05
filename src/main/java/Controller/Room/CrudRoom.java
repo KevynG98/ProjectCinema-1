@@ -1,8 +1,11 @@
 package Controller.Room;
-
+import Model.AdminModel.Admin;
+import Model.MovieModel.Movie;
 import Model.RoomModel.Room;
 import Utils.Files.FileManage;
 import Utils.Interfaces.ICrud;
+
+import java.io.*;
 import java.util.Map;
 import static Model.MovieModel.Movies.movieList;
 import static Model.RoomModel.Rooms.roomList;
@@ -40,5 +43,14 @@ public class CrudRoom implements ICrud {
         }
     }
 
-
+    public static void updateRoom(){
+        try{
+            File file = new File("Data/Room.txt");
+            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
+            writeData.writeObject(roomList);
+            writeData.close();
+        }catch(Exception e){
+            System.err.println(e.getMessage());
+        }
+    }
 }

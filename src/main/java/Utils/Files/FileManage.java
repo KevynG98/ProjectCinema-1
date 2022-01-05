@@ -20,7 +20,6 @@ public class FileManage{
         this.input = new ObjectInputStream(new FileInputStream(file));
 
     }
-
     public Object getInput() throws IOException, ClassNotFoundException {
         return this.input.readObject();
     }
@@ -34,11 +33,9 @@ public class FileManage{
         //Recupera usuarios actuales y add nuevos
         this.output = new ObjectOutputStream(new FileOutputStream(file));
     }
-
     public void closeOutputStream() throws IOException {
         this.output.close();
     }
-
     public void writeOutputStream(Object xd) throws IOException {
         this.output.writeObject(xd);
     }

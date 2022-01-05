@@ -27,7 +27,6 @@ public class AuthUser {
                 return false;
             }
 
-
         } else if (userList.containsKey(nickName)) {
             if (userList.get(nickName).getPassword().equals(passWord)) {
                 UserLogged.assignUser(nickName);

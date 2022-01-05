@@ -1,13 +1,13 @@
 package UI.UserOptions;
 
 import Controller.Movie.CrudMovie;
+import Controller.Room.CrudRoom;
 import Model.RoomMovieModel.RoomMovie;
 import Model.TicketModel.Ticket;
 
 import java.util.Map;
 import java.util.Scanner;
 
-import static Controller.Room.CrudRoom.readRoom;
 import static Controller.Room.CrudRoom.updateRoom;
 import static Controller.RoomMovie.showRoomMovie.showRoomMovies;
 import static Model.MovieModel.Movies.movieList;
@@ -19,6 +19,7 @@ public class UITicketMenu {
 
     public static void UIBuyTicket() throws Exception {
 
+        CrudRoom room = new CrudRoom();
         showRoomMovies();
         Ticket MailSender= new Ticket();
         int response;
@@ -35,6 +36,8 @@ public class UITicketMenu {
                 movieKey = movieKey.toLowerCase();
                 System.out.println(movieKey);
                 movie.read();
+                room.read();
+                room.write();
 
                 if(roomList.containsKey(roomKey) && movieList.containsKey(movieKey)){
                     System.out.println(movieKey);
@@ -64,10 +67,6 @@ public class UITicketMenu {
                 }
             }
         }
-
-
-
-
 
         System.out.println("1.Confirm");
         System.out.println("2.back");

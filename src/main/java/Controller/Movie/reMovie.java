@@ -13,7 +13,6 @@ public class reMovie {
             //Recupera movies actuales
             Movie.read();
 
-
                 if(movieList.containsKey(title)){
                     System.out.println("This name is not Available");
                     System.out.println("Please write a title Available");
@@ -23,8 +22,6 @@ public class reMovie {
                     Movie.setMovie(title, premiere, price);
                     Movie.write();
                 }
-
-
         } catch(Exception e){
             System.err.println(e.getMessage());
         }

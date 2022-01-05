@@ -2,9 +2,6 @@ package Controller.Admin;
 import Model.AdminModel.Admin;
 import java.util.Map;
 import java.util.Scanner;
-import Controller.Admin.CrudAdmin;
-
-import static Controller.Admin.CrudAdmin.readAdmin;
 import static Model.AdminModel.Admins.adminList;
 
 public class showAdmin{

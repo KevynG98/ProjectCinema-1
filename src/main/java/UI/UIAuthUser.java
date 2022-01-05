@@ -1,10 +1,8 @@
 package UI;
 import Controller.Admin.CrudAdmin;
+import Controller.User.CrudUser;
 import Utils.Auth.AuthUser;
-
 import java.util.Scanner;
-import static Controller.Admin.CrudAdmin.readAdmin;
-import static Controller.User.CrudUser.readUser;
 
 public class UIAuthUser {
 
@@ -14,6 +12,7 @@ public static void authUserC() throws Exception {
     boolean userCorrect;
     Scanner sc = new Scanner(System.in);
     CrudAdmin a = new CrudAdmin();
+    CrudUser u = new CrudUser();
 
     do {
         System.out.println("Insert your nickname");
@@ -22,7 +21,7 @@ public static void authUserC() throws Exception {
         String password = sc.nextLine();
 
         a.read();
-        readUser();
+        u.read();
 
         loginSys = new AuthUser(nickname,password);
 
