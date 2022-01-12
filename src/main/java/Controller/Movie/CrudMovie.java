@@ -23,11 +23,12 @@ public class CrudMovie implements ICrud {
     public void setMovie(String title,String premiere,int price){
             this.movie = new Movie((movieList.isEmpty())?1:movieList.size()+1,title,premiere, price);
     }
+
     @Override
     public void read() {
         try {
             this.file.setInput();
-            adminList  = (Map<String, Admin>) this.file.getInput() ;
+            movieList  = (Map<String, Movie>) this.file.getInput() ;
             this.file.closeInputStream();
         } catch (Exception e) {
             if(e.getMessage() != null)
@@ -39,7 +40,8 @@ public class CrudMovie implements ICrud {
     public void write() {
         try {
             movieList.put(movie.getTitle(),getMovie());
-            this.file.OutputStreamProcess(adminList);
+            this.file.OutputStreamProcess(movieList);
+            this.file.closeOutputStream();
         } catch (Exception e) {
             if(e.getMessage() != null)
                 System.err.println(e.getMessage());

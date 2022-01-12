@@ -34,15 +34,15 @@ public class UITicketMenu {
                 String roomKey=  data.getValue().getRoom();
                 String movieKey = data.getValue().getTitle();
                 movieKey = movieKey.toLowerCase();
-                System.out.println(movieKey);
                 movie.read();
                 room.read();
-                room.write();
+
 
                 if(roomList.containsKey(roomKey) && movieList.containsKey(movieKey)){
+
                     System.out.println(movieKey);
                     System.out.println(roomKey.toUpperCase());
-
+                    movieKey = movieKey.toLowerCase();
                     roomList.get(roomKey).print();
                     System.out.println("How many seats you want?");
                     int seatsNumber = Integer.parseInt(sc.nextLine());

@@ -17,6 +17,7 @@ public class CrudAdmin implements ICrud {
     public CrudAdmin(){
         this.a = new FileManage("Admin");
     }
+
     public void setAdmin(String name, String lastName, String nickname, String password) {
         this.admin = new Admin((adminList.isEmpty())?1:adminList.size() + 1, name, lastName, nickname, password);
     }

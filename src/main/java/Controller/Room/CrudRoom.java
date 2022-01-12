@@ -37,6 +37,7 @@ public class CrudRoom implements ICrud {
         try {
             roomList.put(room.getName(),getRoom());
             this.file.OutputStreamProcess(roomList);
+            this.file.closeOutputStream();
         } catch (Exception e) {
             if(e.getMessage() != null)
                 System.err.println(e.getMessage());
