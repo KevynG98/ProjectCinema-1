@@ -30,7 +30,6 @@ public class Report {
 
         }
     }
-
     //Lee el archivo report.txt
     public static void readReport(){
         File file = new File("Data/Report.txt");

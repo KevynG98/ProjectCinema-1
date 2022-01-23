@@ -10,8 +10,8 @@ public class reAdmin {
         try{
             //Recupera usuarios actuales y add nuevos
 
-            CrudAdmin a = new CrudAdmin();
-            a.read();
+            CrudAdmin admin = new CrudAdmin();
+            admin.read();
                 //Registra nuevos usuarios admin
                 if(adminList.containsKey(nickname)){
                     System.out.println("this name is not available");
@@ -19,8 +19,8 @@ public class reAdmin {
                     sc.nextLine();
                     registerAdmin();
                 }else{
-                    a.setAdmin(name,lastName,nickname,password);
-                    a.write();
+                    admin.setAdmin(name,lastName,nickname,password);
+                    admin.write();
                 }
 
         } catch(Exception e){

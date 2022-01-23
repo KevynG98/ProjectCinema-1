@@ -9,9 +9,9 @@ public class reMovie {
     public static void reMovies(String title,String premiere, int price){
         Scanner sc = new Scanner(System.in);
         try {
-            CrudMovie Movie = new CrudMovie();
+            CrudMovie movie = new CrudMovie();
             //Recupera movies actuales
-            Movie.read();
+            movie.read();
 
                 if(movieList.containsKey(title)){
                     System.out.println("This name is not Available");
@@ -19,8 +19,8 @@ public class reMovie {
                     sc.nextLine();
                     reMovie();
                 }else{
-                    Movie.setMovie(title, premiere, price);
-                    Movie.write();
+                    movie.setMovie(title, premiere, price);
+                    movie.write();
                 }
         } catch(Exception e){
             System.err.println(e.getMessage());

@@ -1,46 +1,47 @@
 package Controller.RoomMovie;
 
-
 import Model.RoomMovieModel.RoomMovie;
-import java.io.*;
+import Utils.Files.FileManage;
+import Utils.Interfaces.ICrud;
 import java.util.Map;
 import static Model.RoomMovieModel.RoomMovies.roomMovieList;
 
+public class CrudRoomMovie implements ICrud {
 
-public class CrudRoomMovie {
-    public static void readRoomMovie() {
+    RoomMovie roomMovie;
+    FileManage file;
+
+    public CrudRoomMovie(){
+        file = new FileManage("RoomMovie");
+    }
+    public RoomMovie getRoomMovie(){
+        return roomMovie;
+}
+    public void setRoomMovie(String title, String room){
+        this.roomMovie = new RoomMovie(title,room);
+}
+    @Override
+    public void read() {
         try {
-            File file = new File("Data/RoomMovie.txt");
-            //Recupera usuarios RoomMovies y add nuevos
-            ObjectInputStream recoveryData = new ObjectInputStream(new FileInputStream(file));
-            roomMovieList  = (Map<Integer, RoomMovie>) recoveryData.readObject();
-            recoveryData.close();
+            this.file.setInput();
+            roomMovieList  = (Map<Integer, RoomMovie>) this.file.getInput() ;
+            this.file.closeInputStream();
         } catch (Exception e) {
             if(e.getMessage() != null)
                 System.err.println(e.getMessage());
         }
     }
-    public static void writeNewRoomMovie(String title,String room){
-        try{
-            File file = new File("Data/RoomMovie.txt");
-            roomMovieList.put(roomMovieList.size()+1, new RoomMovie(title,room));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(roomMovieList);
-            writeData.close();
-        }catch(Exception e){
-            System.err.println(e.getMessage());
+    @Override
+    public void write() {
+        try {
+            roomMovieList.put((roomMovieList.isEmpty())?1:roomMovieList.size()+1, getRoomMovie());
+            this.file.OutputStreamProcess(roomMovieList);
+            this.file.closeOutputStream();
+        } catch (Exception e) {
+            if(e.getMessage() != null)
+                System.err.println(e.getMessage());
         }
     }
-    public static void writeRoomMovie(String title,String room){
-        try{
-            File file = new File("Data/RoomMovie.txt");
-            roomMovieList.put(1, new RoomMovie(title,room));
-            ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
-            writeData.writeObject(roomMovieList);
-            writeData.close();
-        }catch (Exception e){
-            System.err.println(e.getMessage());
-        }
-    }
+
 
 }

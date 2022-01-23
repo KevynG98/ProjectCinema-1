@@ -11,7 +11,6 @@ public class reRoom {
             //Recupera rooms actuales y add nuevos
             CrudRoom room  = new CrudRoom();
             room.read();
-
                 //Registra nuevos room
                 if(roomList.containsKey(name)){
                     System.out.println("this name is not available");

@@ -1,0 +1,12 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(¦˜Ò’
+C
+java:S2440"-Remove this instantiation of "CrudRoomMovie".(×¶‚˜
+g
+java:S2175"JA "Map<Integer, RoomMovie>" cannot contain a "String" in a "Integer" type.(®ÓÕ—8°½ÂËç/
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÿÍÏã
+S	java:S106"9Replace this use of System.out or System.err by a logger.(öíÁëüÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(ïù¯¯ûÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¶‚˜
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²ÖŸ£ûÿÿÿÿ

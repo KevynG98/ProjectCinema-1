@@ -1,13 +1,9 @@
 package Controller.Room;
-import Model.AdminModel.Admin;
-import Model.MovieModel.Movie;
 import Model.RoomModel.Room;
 import Utils.Files.FileManage;
 import Utils.Interfaces.ICrud;
-
 import java.io.*;
 import java.util.Map;
-import static Model.MovieModel.Movies.movieList;
 import static Model.RoomModel.Rooms.roomList;
 
 public class CrudRoom implements ICrud {
@@ -19,7 +15,7 @@ public class CrudRoom implements ICrud {
     }
     public void setRoom(String name,String date){
         int sits[][] = new int[5][5];
-        this.room = new Room((roomList.isEmpty())?1:movieList.size()+1,name,date,sits);
+        this.room = new Room((roomList.isEmpty())?1:roomList.size()+1,name,date,sits);
     }
     @Override
     public void read() {

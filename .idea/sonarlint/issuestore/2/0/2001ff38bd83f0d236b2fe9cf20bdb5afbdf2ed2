@@ -1,0 +1,16 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(ØÔÑûøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Åéáàúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Æ˜¿·
+S	java:S106"9Replace this use of System.out or System.err by a logger.(–¶ıäøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ŸÆÓ­
+S	java:S106"9Replace this use of System.out or System.err by a logger.(üŸàÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‡Ö…ı
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‡õÕÃ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¸¬ŞÜşÿÿÿÿ
+J
+java:S1128"/Remove this unused import 'UI.UIMenu.showMenu'.(õ®’Ñøÿÿÿÿ
+D
+java:S1121".Extract the assignment out of this expression.(ÂĞ™®
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÁÕŒüÿÿÿÿ

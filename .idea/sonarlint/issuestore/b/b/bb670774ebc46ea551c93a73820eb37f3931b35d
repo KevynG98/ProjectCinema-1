@@ -1,0 +1,14 @@
+
+U
+java:S1118	":Add a private constructor to hide the implicit public one.(ìÇŠøÿÿÿÿ
+l
+java:S1104"VMake userLogged a static final constant or non-public and provide accessors if needed.(ùù™Æ
+r
+java:S1104"WMake adminLogged a static final constant or non-public and provide accessors if needed.(‰ö‘ëøÿÿÿÿ
+F
+java:S1444"0Make this "public static userLogged" field final(ùù™Æ
+L
+java:S1444"1Make this "public static adminLogged" field final(‰ö‘ëøÿÿÿÿ
+/
+java:S1700"Rename field "userLogged"(ùù™Æ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡×ÜĞüÿÿÿÿ

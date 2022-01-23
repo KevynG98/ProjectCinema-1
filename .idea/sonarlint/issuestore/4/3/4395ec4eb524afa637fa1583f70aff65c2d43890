@@ -1,0 +1,22 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Â¢¸„üÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´´€Ïıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÂÌÑ‹üÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(¸­ñ­ıÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(¸­ñ­ıÿÿÿÿ
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(ì×¾Ï
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(¿ñÒûÿÿÿÿ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(§ÒÅ£
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(—™ï8›Ôğáâ/
+U	java:S106<"9Replace this use of System.out or System.err by a logger.(ÃÂ€ô8›Ôğáâ/
+U	java:S106A"9Replace this use of System.out or System.err by a logger.(ÆÈ†ó8œÔğáâ/
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(üŸàÿÿÿÿÿ8œÔğáâ/
+U	java:S106H"9Replace this use of System.out or System.err by a logger.(‡Ö…ı8œÔğáâ/
+U	java:S106I"9Replace this use of System.out or System.err by a logger.(‡õÕÃ8œÔğáâ/
+C	java:S131K""Add a default case to this switch.(§Í‡­ùÿÿÿÿ8Ôğáâ/
+Z	java:S106O"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Ôğáâ/
+Z	java:S106T"9Replace this use of System.out or System.err by a logger.(¸¯÷òıÿÿÿÿ8Ôğáâ/
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†I
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÇ¹ıÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(üşí†

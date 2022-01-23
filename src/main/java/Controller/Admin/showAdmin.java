@@ -9,8 +9,8 @@ public class showAdmin{
     public static void showAdmins(){
         try{
             //Recupera todos los usuarios admin existentes
-            CrudAdmin readAdmin = new CrudAdmin();
-            readAdmin.read();
+            CrudAdmin admin = new CrudAdmin();
+            admin.read();
             //Recorre los usuarios admin existentes
             for (Map.Entry<String, Admin> data: adminList.entrySet()) {
                 System.out.println(data.getValue());

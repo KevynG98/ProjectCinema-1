@@ -9,17 +9,14 @@ public class showMovie {
     public static void showMovies(){
         try{
             //Recupera todos los usuarios existentes
-            CrudMovie readMovie = new CrudMovie();
-            readMovie.read();
+            CrudMovie movie = new CrudMovie();
+            movie.read();
             for (Map.Entry<String,Movie> data: movieList.entrySet()) {
                 System.out.println(data.getValue());
             }
-        } catch(Exception e){
+        } catch(Exception e) {
             System.out.println(e.getMessage());
         }
-
-
         Scanner sc = new Scanner(System.in);
-
     }
 }
