@@ -9,8 +9,8 @@ public class showUser {
     public static void showUsers(){
         try{
             //Recupera todos los usuarios existentes
-            CrudUser readUser = new CrudUser();
-             readUser.read();
+            CrudUser user = new CrudUser();
+             user.read();
              //Recorre los usarios existentes
             for (Map.Entry<String,User> data: userList.entrySet()) {
                 System.out.println(data.getValue());

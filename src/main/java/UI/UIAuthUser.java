@@ -11,8 +11,8 @@ public static void authUserC() throws Exception {
     AuthUser loginSys;
     boolean userCorrect;
     Scanner sc = new Scanner(System.in);
-    CrudAdmin a = new CrudAdmin();
-    CrudUser u = new CrudUser();
+    CrudAdmin admin = new CrudAdmin();
+    CrudUser user = new CrudUser();
 
     do {
         System.out.println("Insert your nickname");
@@ -20,8 +20,8 @@ public static void authUserC() throws Exception {
         System.out.println("Insert your password");
         String password = sc.nextLine();
 
-        a.read();
-        u.read();
+        admin.read();
+        user.read();
 
         loginSys = new AuthUser(nickname,password);
 

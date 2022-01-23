@@ -8,7 +8,6 @@ import Model.TicketModel.Ticket;
 import java.util.Map;
 import java.util.Scanner;
 
-import static Controller.Room.CrudRoom.updateRoom;
 import static Controller.RoomMovie.showRoomMovie.showRoomMovies;
 import static Model.MovieModel.Movies.movieList;
 import static Model.RoomMovieModel.RoomMovies.roomMovieList;
@@ -74,7 +73,7 @@ public class UITicketMenu {
         response = Integer.parseInt(sc.nextLine());
         switch (response) {
             case 1 -> {
-                updateRoom();
+                room.write();
                 SendTicketTo(MailSender);
                 System.out.println();
             }

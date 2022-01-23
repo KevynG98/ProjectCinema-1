@@ -40,7 +40,7 @@ public class CrudRoom implements ICrud {
         }
     }
 
-    public static void updateRoom(){
+   /*public static void updateRoom(){
         try{
             File file = new File("Data/Room.txt");
             ObjectOutputStream writeData = new ObjectOutputStream(new FileOutputStream(file));
@@ -49,5 +49,5 @@ public class CrudRoom implements ICrud {
         }catch(Exception e){
             System.err.println(e.getMessage());
         }
-    }
+    }*/
 }

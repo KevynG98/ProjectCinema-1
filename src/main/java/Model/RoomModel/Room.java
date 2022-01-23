@@ -1,5 +1,6 @@
 package Model.RoomModel;
 
+import Controller.Room.CrudRoom;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +8,7 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.Locale;
 
-import static Controller.Room.CrudRoom.updateRoom;
+//import static Controller.Room.CrudRoom.updateRoom;
 
 @AllArgsConstructor
 @Setter
@@ -27,7 +28,8 @@ public class Room implements Serializable {
                sits[i][j] = 0;
            }
        }
-       updateRoom();
+        CrudRoom room = new CrudRoom();
+        room.write();
    }
 
   public void print(){
@@ -40,7 +42,6 @@ public class Room implements Serializable {
                       System.out.print(x + " ");
                       System.out.print((x == sits.length)?"\n":"");
                   }
-
               }
               System.out.print(((j == 0)?c+" ":"")+sits[i][j]+" ");
               }

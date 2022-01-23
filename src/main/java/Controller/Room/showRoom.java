@@ -8,8 +8,8 @@ public class showRoom {
     public static void showRooms(){
             try{
                 //Recupera todos los room
-                CrudRoom readRoom = new CrudRoom();
-                readRoom.read();
+                CrudRoom room = new CrudRoom();
+                room.read();
                 //Recorre los room
                 for (Map.Entry<String, Room> data: roomList.entrySet()) {
                     System.out.println(data.getValue());
