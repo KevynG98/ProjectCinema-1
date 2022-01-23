@@ -2,7 +2,6 @@ package UI.AdminOptions.MovieOptions;
 import java.util.Scanner;
 import static Controller.Movie.showMovie.showMovies;
 import static UI.AdminOptions.MovieOptions.UIReMovie.reMovie;
-
 public class UIMovie {
     public static void movieMenu(){
         int response;
