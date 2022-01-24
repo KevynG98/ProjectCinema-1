@@ -1,27 +1,31 @@
 package UI.AdminOptions;
+import Model.AdminModel.Admin;
+import Model.UserDetails;
+
 import java.util.Scanner;
 import static Controller.Admin.reAdmin.reAdmins;
 
 public class UIRegisterAdmin {
     public static void registerAdmin(){
+        UserDetails admin= new Admin();
         int response = 0;
         Scanner sc = new Scanner(System.in);
         do{
             System.out.println("Write your name");
-            String name = sc.nextLine();
+            admin.setName(sc.nextLine());
             System.out.println("Write your lastName");
-            String lastName = sc.nextLine();
+            admin.setLastName(sc.nextLine());
             System.out.println("Write your nickname");
-            String nickname = sc.nextLine();
+            admin.setNickname(sc.nextLine());
             System.out.println("Write your password");
-            String password = sc.nextLine();
+            admin.setPassword(sc.nextLine());
             System.out.println("1.Confirm");
             System.out.println("2.back");
             System.out.println("3.exit");
             response = Integer.parseInt(sc.nextLine());
             switch (response){
                 case 1 ->{
-                    reAdmins(name,lastName,nickname,password);
+                    reAdmins(admin);
                     response = 0;
                 }
                 case 2 -> response = 1;

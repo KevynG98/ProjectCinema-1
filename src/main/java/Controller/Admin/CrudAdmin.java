@@ -1,6 +1,7 @@
 package Controller.Admin;
 
 import Model.AdminModel.Admin;
+import Model.UserDetails;
 import Utils.Files.FileManage;
 import Utils.Interfaces.ICrud;
 import java.util.Map;
@@ -16,13 +17,15 @@ public class CrudAdmin implements ICrud {
         this.file = new FileManage("Admin");
     }
 
-    public void setAdmin(String name, String lastName, String nickname, String password) {
-        this.admin = new Admin((adminList.isEmpty())?1:adminList.size() + 1, name, lastName, nickname, password);
+    public void setAdmin(UserDetails admin) {
+        this.admin = (Admin) admin;
+        this.admin.setId((adminList.isEmpty())?1:adminList.size() + 1);
     }
 
     public Admin getAdmin(){
         return this.admin;
     }
+
     @Override
     public void read() {
         try {

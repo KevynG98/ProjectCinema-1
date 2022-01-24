@@ -8,4 +8,8 @@ public class Admin extends UserDetails {
     {
         super(id, name, lastName, nickname, password);
     }
+    public Admin()
+    {
+        super(0,"", "", "", "");
+    }
 }
